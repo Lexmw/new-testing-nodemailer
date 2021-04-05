@@ -80,7 +80,6 @@ module.exports = (requestObject) => {
     attachments: attachments // attachment array
   };
 
-  console.log("444 printed Name", printedName)
   if(printedName != null) {
     // send the message, listen for error
     transporter.sendMail(mailOptions, function(error, info){
