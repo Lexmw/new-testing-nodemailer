@@ -15,7 +15,7 @@ module.exports = (requestObject) => {
       } else if (formField[0] == 'signature' ) {
         attachments.push({
           filename: 'signature.png',
-          content: Buffer.from(formField[1].split(',')[1], 'base64'),
+          content: new Buffer(formField[1].split(',')[1], 'base64'),
           cid: 'signature'
         });
       } else if (formField[0] == 'Printed Name') {
